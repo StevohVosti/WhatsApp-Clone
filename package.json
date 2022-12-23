@@ -10,7 +10,7 @@
     "dev": "concurrently \"npm start\" \"npm run Frontend\" "
   },
   "keywords": [],
-  "author": "Techinfoyt",
+  "author": "Stephen Maina",
   "license": "MIT",
   "dependencies": {
    
