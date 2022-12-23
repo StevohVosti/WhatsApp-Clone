@@ -1,7 +1,7 @@
 {
   "name": "Whatsapp-clone",
   "version": "1.0.0",
-  "description": "expanse tracker app",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
