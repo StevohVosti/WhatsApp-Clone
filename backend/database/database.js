@@ -8,11 +8,12 @@ const PASSWORD = process.env.DB_PASSWORD;
 const Connection = () => {
   mongoose.connect(`mongodb+srv://${USERNAME}:${PASSWORD}@whatsapp-clone.dqk97rk.mongodb.net/?retryWrites=true&w=majority`, {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   }).then((data) => {
-    console.log(`Database is Connected ${data.connection.host}`)
-  })
-  }
+    console.log(`Database is now connected: ${data.connection.host}`);
+  });
+};
+
 
 module.exports = Connection;
 
