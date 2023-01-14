@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "",
   "main": "server.js",
+   "type": "module",
   "scripts": {
-    "start": "node server.js",
-    "server": "nodemon server.js",
-    "Frontend": "npm start --prefix Frontend",
-    "dev": "concurrently \"npm start\" \"npm run Frontend\" "
+    "start": "node backend/"server.js",
+    "server": "nodemon backend/"server.js",
+    "client": "npm start --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "data:import": "node backend/seeder",
+    "data:destroy": "node backend/seeder -d",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
   },
   "keywords": [],
   "author": "Stephen Maina",
