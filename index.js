@@ -27,16 +27,16 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cors());
 app.use("/", Routes);
 
-app.use(express.static(path.join(__dirname, "../Frontend/build")));
+// app.use(express.static(path.join(__dirname, "../Frontend/build")));
 
-app.get("*", function (_, res) {
-  res.sendFile(
-    path.join(__dirname, "../Frontend/build/index.html"),
-    function (err) {
-      res.status(500).send(err);
-    }
-  );
-});
+// app.get("*", function (_, res) {
+//   res.sendFile(
+//     path.join(__dirname, "../Frontend/build/index.html"),
+//     function (err) {
+//       res.status(500).send(err);
+//     }
+//   );
+// });
 
 app.listen(PORT, () =>
   console.log(`Server is running successfully on PORT ${PORT}`)
